@@ -1,0 +1,22 @@
+{
+  "name": "Gaurav Gogoi",
+  "title": "Software Engineer · Platform & Reliability",
+  "tagline": "I build systems that stay up.",
+  "bio": "I work on making distributed systems observable, automated, and resilient—building the tooling, platforms, and automation that improve reliability and reduce operational toil.",
+  "email": "gaurav.gogoi2020@gmail.com",
+  "github": "https://github.com/gauravgogoi",
+  "linkedin": "https://www.linkedin.com/in/gaurav-gogoi-62788b19b/",
+  "work": [
+    {
+      "role": "Software Engineer 2 — Platform & Reliability",
+      "company": "Zuora",
+      "period": "2025 – present"
+    },
+    {
+      "role": "Software Engineer — Platform & Infrastructure",
+      "company": "Zuora",
+      "period": "2023 – 2025"
+    }
+  ],
+  "stack": ["Kubernetes", "AWS", "Prometheus", "Grafana", "Terraform", "Python", "SLI/SLO", "Incident Response"]
+}

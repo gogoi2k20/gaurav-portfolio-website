@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "what-is-observability",
+    "title": "What observability actually means — and why monitoring isn't enough",
+    "description": "The three pillars are a starting point, not a destination. Here's how I think about o11y in practice.",
+    "date": "2026-06-12",
+    "tag": "observability"
+  },
+  {
+    "slug": "prometheus-cardinality",
+    "title": "Cardinality is the enemy: lessons from a Prometheus meltdown",
+    "description": "We added one label. Our Prometheus OOMed. A story about high-cardinality metrics and how to tame them.",
+    "date": "2026-07-01",
+    "tag": "prometheus"
+  }
+]
