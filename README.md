@@ -1,22 +1,54 @@
-# React + Vite
+# gauravgogoi.dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal portfolio and blog. Built with React + Vite, deployed on Cloudflare Pages.
 
-Currently, two official plugins are available:
+## Running locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+Opens at `http://localhost:5173`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Publishing a new post
 
-## Expanding the Oxlint configuration
+**Step 1 — Write the content**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Create a markdown file in `src/content/posts/`:
 
+```
+src/content/posts/your-post-slug.md
+```
 
-To add a new blog post — two steps only:
+Write in plain markdown. Supports headings, code blocks, blockquotes, bold, lists — everything standard.
 
-Add an entry to posts.json with slug, title, date, tag, description
-Create src/content/posts/your-slug.md and write in markdown
+**Step 2 — Register the post**
+
+Add an entry to `src/content/posts.json`:
+
+```json
+{
+  "slug": "your-post-slug",
+  "title": "Your post title",
+  "description": "One sentence shown on the blog listing page.",
+  "date": "2025-07-10",
+  "tag": "observability"
+}
+```
+
+The `slug` must exactly match the filename (without `.md`). The `date` controls ordering — newest first.
+
+That's it. The post appears on `/blogs` and is live at `/blogs/your-post-slug`.
+
+## Hiding a post
+
+Remove (or comment out) its entry from `posts.json`. The `.md` file can stay — it just won't be linked anywhere.
+
+## Deploying
+
+```bash
+npm run build   # outputs to /dist
+```
+
+Cloudflare Pages auto-deploys on every push to `main` if connected to GitHub. Build command: `npm run build`. Output directory: `dist`.
