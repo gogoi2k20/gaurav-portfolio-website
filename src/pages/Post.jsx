@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import posts from '../content/posts.json'
 
 // Import all markdown files eagerly via Vite's import.meta.glob
-const markdownFiles = import.meta.glob('../content/posts/*.md', { as: 'raw' })
+const markdownFiles = import.meta.glob('../content/posts/*.md', { query: '?raw', import: 'default' })
 
 function formatDateLong(dateStr) {
   return new Date(dateStr).toLocaleDateString('en-US', {
