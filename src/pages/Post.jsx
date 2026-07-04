@@ -71,14 +71,14 @@ export default function Post() {
         {/* Post footer */}
         <div className="post-footer">
           <Link to="/blogs" className="back-link">← All posts</Link>
-          <a
+          {/* <a
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(meta.title)}`}
             target="_blank"
             rel="noopener"
             className="back-link"
           >
             Share on Twitter →
-          </a>
+          </a> */}
         </div>
       </div>
     </main>

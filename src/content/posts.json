@@ -12,5 +12,12 @@
     "description": "We added one label. Our Prometheus OOMed. A story about high-cardinality metrics and how to tame them.",
     "date": "2026-07-01",
     "tag": "prometheus"
+  },
+  {
+    "slug": "kubectl-rollout-restart-zero-downtime",
+    "title": "Why kubectl rollout restart isn't a zero-downtime guarantee",
+    "description": "Five failure models, five fixes. What kubectl rollout restart actually needs to be safe in production.",
+    "date": "2026-07-15",
+    "tag": "kubernetes"
   }
 ]
