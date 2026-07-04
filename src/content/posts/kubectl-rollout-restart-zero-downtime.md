@@ -58,16 +58,15 @@ The Pod passes its readiness probe. The rollout waits for readiness before proce
 
 Add a dedicated `/ready` endpoint that reflects actual application readiness — not just process liveness.
 
-```go
-var cacheWarmed atomic.Bool
+```javascript
+let cacheWarmed = false
 
-func readyHandler(w http.ResponseWriter, r *http.Request) {
-    if !cacheWarmed.Load() {
-        http.Error(w, "cache not warmed", http.StatusServiceUnavailable)
-        return
-    }
-    w.WriteHeader(http.StatusOK)
-}
+app.get('/ready', (req, res) => {
+  if (!cacheWarmed) {
+    return res.status(503).send('cache not warmed')
+  }
+  res.sendStatus(200)
+})
 ```
 
 ```yaml
