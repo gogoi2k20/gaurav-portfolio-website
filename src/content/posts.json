@@ -17,7 +17,7 @@
     "slug": "kubectl-rollout-restart-zero-downtime",
     "title": "Why kubectl rollout restart isn't a zero-downtime guarantee",
     "description": "Five failure models, five fixes. What kubectl rollout restart actually needs to be safe in production.",
-    "date": "2026-07-15",
+    "date": "2026-07-04",
     "tag": "kubernetes"
   }
 ]
